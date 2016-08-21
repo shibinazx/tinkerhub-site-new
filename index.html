@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Theme Made By www.w3schools.com - No Copyright -->
+
   <title>TinkerHub</title>
+  <link rel="icon" href="images/nav.png">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -301,7 +302,7 @@
 
     </div>
     <div class="col-sm-5">
-      <a class="twitter-timeline"
+      <a class="twitter-timeline" id="twitter-wjs"
         href="https://twitter.com/tinkerhub">
         Tweets by @tinkerhub
       </a>
@@ -357,7 +358,22 @@
   <p>Hosted on <a href="https://github.com/hvinayan/tinkerhub-site-new"><i class="fa fa-github" aria-hidden="true"></i>
 </a></p>
 </footer>
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
 
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
 <script>
 $(document).ready(function(){
 
