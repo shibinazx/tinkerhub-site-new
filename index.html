@@ -302,10 +302,8 @@
 
     </div>
     <div class="col-sm-5">
-      <a class="twitter-timeline" id="twitter-wjs"
-        href="https://twitter.com/tinkerhub">
-        Tweets by @tinkerhub
-      </a>
+      <a class="twitter-timeline" data-width="400" data-height="400" data-link-color="#981CEB" href="https://twitter.com/TinkerHub">Tweets by TinkerHub</a>
+      <script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
       <a href="mailchimpurl" class="btn btn-info btn-lg btn-block btn-raised">Subscribe to the  <i class="fa fa-newspaper-o" aria-hidden="true"></i>
  Newsletter</a>
     </div>
@@ -358,22 +356,7 @@
   <p>Hosted on <a href="https://github.com/hvinayan/tinkerhub-site-new"><i class="fa fa-github" aria-hidden="true"></i>
 </a></p>
 </footer>
-<script>window.twttr = (function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0],
-    t = window.twttr || {};
-  if (d.getElementById(id)) return t;
-  js = d.createElement(s);
-  js.id = id;
-  js.src = "https://platform.twitter.com/widgets.js";
-  fjs.parentNode.insertBefore(js, fjs);
 
-  t._e = [];
-  t.ready = function(f) {
-    t._e.push(f);
-  };
-
-  return t;
-}(document, "script", "twitter-wjs"));</script>
 <script>
 $(document).ready(function(){
 
