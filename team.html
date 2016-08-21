@@ -126,11 +126,13 @@
       background-color: #374B6B;
       z-index: 9999;
       border: 0;
-      font-size: 12px !important;
+      font-size: 14px !important;
       line-height: 1.42857143 !important;
-      letter-spacing: 4px;
+      letter-spacing: 2px;
       border-radius: 0;
-      font-family: Montserrat, sans-serif;
+      font-family: 'Open Sans', sans-serif;
+      opacity: 0.9;
+
   }
   .navbar li a, .navbar .navbar-brand {
       color: #ECEEEF !important;
@@ -191,9 +193,12 @@
         font-size: 150px;
     }
   }
+
   </style>
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+
+<body id="index" data-spy="scroll" data-target=".navbar" data-offset="60">
 
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
@@ -203,7 +208,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#myPage">TinkerHub</a>
+      <img href="index.html" style="padding-top: 8px;" src="nav.png" width="10%" height="10%"/>
+
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
@@ -223,66 +229,75 @@
         <li><a href="about.html">About</a></li>
         <li><a href="blog.tinkerhub.org">Blog</a></li>
         <li style="padding-top: 9px; padding-left:20px">
-          <button type="button" class="btn btn-raised btn-warning">
-          <span class="glyphicon glyphicon-star" aria-hidden="true"></span><a href="join.html">Join</a>
-          </button>
+
+            <button id="joinbtn" type="button" class="btn btn-raised btn-warning">
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>Join
+            </button>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 
-
 <div class="jumbotron text-center">
-  <h1>Entrepreneurship</h1>
-  <p>“It’s not about ideas. It’s about making ideas happen.” - Scott Belsky, co-founder of Behance.</p>
-
+  <h1>Team</h1>
+  <p>People behind the curtains</p>
 </div>
 
 
-<div class="container-fluid bg-grey">
-  <div class="row">
-    <div class="col-sm-4">
-      <h2>Student entrepreneurship 101 </h2>
-      <h3>How to startup from college ?</h3>
-        <p> This E-book will help you understand how to work with your startup idea as a student. This will include starting up fromcollege in an indian ecosystem. The main focus here will be acquring the kind of skills needed to run a startup. How to learn it and get into a incubator or accelerator. This can be considered as a validation of the idea too. This Book will include tips and tricks to get into a incubator or accelerator. We will soon publish the book. Subscribe to our news letter to Know more.
-         </p> <button type="button" class="btn btn-success">Subscribe</button>
-        &nbsp;
 
 
 
 
 
+
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+  <h2>Mentors</h2>
+  <hr>
+  <div class="row slideanim">
+    <div class="col-sm-6">
+      <img src="images/team/t1.jpg" width=300 height=300>
+      <h4>POWER</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
     </div>
-    <div class="col-sm-8">
-
-       <img style="width:100%; height:100%;" src="images/tinker_img(5).jpg" class="img-rounded" alt="tinkerers at play" width="300" height="150" >
+    <div class="col-sm-6">
+      <img src="images/team/t2.jpg" width=300 height=300>
+      <h4>LOVE</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
     </div>
   </div>
 </div>
 
 
-<div class="container-fluid " >
-  <div class="row" >
-    <div class="col-sm-8" >
-
-       <img style="width:100%; height:100%;" src="images/businessModelWorkshop.JPG" class="img-rounded" alt="tinkerers at play" width="300" height="150" >
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+  <h2>Founders</h2>
+  <hr>
+  <div class="row slideanim">
+    <div class="col-sm-3">
+      <img src="images/team/t3.jpg" width=200 height=200>
+      <h4>JOB DONE</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
     </div>
-    <div class="col-sm-4">
-      <h2>Design thinking workshop</h2>
-        <h3>How to build products that people would buy</h3>
-        <p>Design Thinking as a tool and process is becoming popular in the world of Business today. Organizations of all types from large multinationals to small and medium companies use Design Thinking to innovate and give a fresh approach to Problem Solving. The emphasis here are the Human-Centered Design and empathy driven solutions. Promoted widely by design firms like IDEO and Stanford University’s D School, Design Thinking is now on the must know tools of all major companies. The course looks at the different aspects of Design Thinking and can be seen as a new approach better suited for dealing with new approach to Innovation. Though designing, as a craft requires years of dedicated education and talent, this workshop does not require a prior experience in Design and is open to anyone with a desire to learn new techniques of innovation.</p>         <button type="button" class="btn btn-success">Request a workshop</button>
-
-        &nbsp;
-
-
-
-
-
+    <div class="col-sm-3">
+      <img src="images/team/t4.jpg" width=200 height=200>
+      <h4>GREEN</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-3">
+      <img src="images/team/t5.jpg" width=200 height=200>
+      <h4>CERTIFIED</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-3">
+      <img src="images/team/t6.jpg" width=200 height=200>
+      <h4 style="color:#303030;">HARD WORK</h4>
+      <p>Lorem ipsum dolor sit amet..</p>
     </div>
   </div>
 </div>
-
 
 
 
@@ -309,6 +324,10 @@
 
 <script>
 $(document).ready(function(){
+
+  $("#joinbtn").on("click", function() {
+    window.open("join.html","_self")
+  });
   // Add smooth scrolling to all links in navbar + footer link
   $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
     // Make sure this.hash has a value before overriding default behavior
