@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Theme Made By www.w3schools.com - No Copyright -->
+
   <title>TinkerHub</title>
+  <link rel="icon" href="images/nav.png">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -14,6 +15,9 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://use.fontawesome.com/fc970de739.js"></script>
   <style>
+  a {
+    color: grey;
+  }
   body {
       font: 400 15px Lato, sans-serif;
       line-height: 1.8;
@@ -197,44 +201,47 @@
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <a class="navbar-brand" rel="home" href="#" title="Buy Sell Rent Everyting">
+        <img style=" margin-top: -4px;"
+             src="images/logo_whiteTextRight.png" width="200" height="25">
+    </a>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="engage">Engage
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="leadership">Leadership</a></li>
+            <li><a href="technology">Technology</a></li>
+            <li><a href="innovation">Innovation</a></li>
+            <li><a href="entrepreneurship">Entrepreneurship</a></li>
+          </ul>
+          </li>
+          <li><a href="space">Space</a></li>
+          <li><a href="community">Community</a></li>
+          <li><a href="events">Events</a></li>
+          <li><a href="team">Team</a></li>
+          <li><a href="about">About</a></li>
+          <li><a href="http://blog.tinkerhub.org">Blog</a></li>
+          <li style="padding-top: 9px; padding-left:20px">
 
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#myPage">TinkerHub</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="engage.html">Engage
-        <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="leadership.html">Leadership</a></li>
-          <li><a href="technology.html">Technology</a></li>
-          <li><a href="innovation.html">Innovation</a></li>
-          <li><a href="entrepreneurship.html">Entrepreneurship</a></li>
+              <button id="joinbtn" type="button" class="btn btn-raised btn-warning">
+                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>Join
+              </button>
+          </li>
         </ul>
-        </li>
-        <li><a href="model.html">Model</a></li>
-        <li><a href="community.html">Community</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="blog.tinkerhub.org">Blog</a></li>
-        <li style="padding-top: 9px; padding-left:20px">
-          <button type="button" class="btn btn-raised btn-warning">
-          <span class="glyphicon glyphicon-star" aria-hidden="true"></span><a href="join.html">Join</a>
-          </button>
-        </li>
-      </ul>
+      </div>
     </div>
-  </div>
-</nav>
-
+  </nav>
 
 <div class="jumbotron text-center">
   <h1>Innovation</h1>
@@ -311,26 +318,29 @@
 
 
 <footer class="container-fluid text-center bg-grey">
-  <a href="#myPage" title="To Top">
+  <a href="#index" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
   <br>
-    <span class="fa fa-twitter"></span>
+    <a href="https://twitter.com/TinkerHub"><span class="fa fa-twitter"></span></a>
     &nbsp;
-    <span class="fa fa-facebook"></span>
+    <a href="https://www.facebook.com/tinkerhub/"><span class="fa fa-facebook"></span></a>
     &nbsp;
-    <span class="fa fa-github"></span>
+    <a href="https://github.com/TinkerHubPublic"><span class="fa fa-github"></span></a>
     &nbsp;
-    <span class="fa fa-instagram"></span>
+    <a href="mailchimpurl"><span class="fa fa-newspaper-o"></span></a>
     &nbsp;
-    <span class="fa fa-newspaper-o"></span>
-    &nbsp;
-    <span class="fa fa-slack"></span>
+    <a href="http://slacker-1.herokuapp.com/"><span class="fa fa-slack"></span></a>
   <p>Made with  <i class="fa fa-heart" aria-hidden="true"></i>  at TinkerHub</p>
+  <p>Hosted on <a href="https://github.com/hvinayan/tinkerhub-site-new"><i class="fa fa-github" aria-hidden="true"></i>
+</a></p>
 </footer>
 
 <script>
 $(document).ready(function(){
+  $("#joinbtn").on("click", function() {
+    window.open("join.html","_self")
+  });
   // Add smooth scrolling to all links in navbar + footer link
   $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
     // Make sure this.hash has a value before overriding default behavior
